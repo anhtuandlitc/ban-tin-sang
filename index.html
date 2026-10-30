@@ -15,7 +15,7 @@
 @media (prefers-color-scheme:dark){:root{--wash:#1C1B18;--bg:#161513;--ink:#EDEBE4;--soft:#A5A398;--grey:#6E6C63;--hair:#2F2D28;--clay:#E0805C;--ok:#5FC08F;--gold:#D9B04A;--card:#1F1E1A;--t1:#3A2219;--t2:#1F2830;--t3:#17291F;--t4:#2A241A;color-scheme:dark}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;padding:24px max(16px,env(safe-area-inset-right)) 56px max(16px,env(safe-area-inset-left))}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;padding:24px max(16px,env(safe-area-inset-right)) 56px max(16px,env(safe-area-inset-left))}
 a{color:inherit;text-decoration:underline;text-decoration-color:var(--grey);text-underline-offset:3px}
 a:hover{text-decoration-color:var(--ink)}
 .num{font-variant-numeric:tabular-nums}
@@ -90,11 +90,12 @@ h1{font-size:30px}
 </style>
 </head>
 <body>
+
 <div class="wrap">
 
 <header class="hero">
-<p class="kick">Thứ Tư · 28/10/2026 · TP. Hồ Chí Minh · cập nhật 16:20</p>
-<h1>Ngày trống lịch, mưa chiều và Fed rạng sáng mai.</h1>
+<p class="kick">Thứ Sáu · 30/10/2026 · TP. Hồ Chí Minh · cập nhật 11:30</p>
+<h1>Mưa dông chiều tối, AQI 153, VN-Index lùi về 1.755.</h1>
 <p class="sub">Thời tiết, tin lớn, việc làm gói gọn trong một trang.</p>
 <svg class="terrain" viewBox="0 0 840 120" role="img" aria-label="Một đường phẳng, ngày không có cuộc hẹn nào">
 <path class="stroke" d="M0 84 C60 81 110 87 180 84 S300 81 380 84 S520 88 600 84 S740 81 840 83" fill="none" stroke-width="2.2" stroke-linecap="round"/>
@@ -102,89 +103,42 @@ h1{font-size:30px}
 <g class="stroke" stroke-width="1.8" stroke-linecap="round" fill="none"><path d="M405 44q6-9 12 0q6-9 12 0"/><path d="M400 60l-3 9M416 64l-3 9M432 60l-3 9M448 64l-3 9" opacity=".55"/></g>
 <g class="stroke" stroke-width="2" fill="none" stroke-linecap="round"><path d="M706 28a16 16 0 1 0 14 24a13 13 0 1 1 -14 -24z"/></g>
 </svg>
-<div class="chips">
-<span class="chip">Hôm nay <b class="num">33°C</b>, mưa nhẹ chiều</span>
-<span class="chip">Mai AQI tới <b class="num">138</b></span>
-<span class="chip">Brent <b class="num">~114</b> USD</span>
-<span class="chip">Fed rạng sáng <b class="num">29/10</b></span>
-<span class="chip">Việc làm top: HSC <b class="num">86</b></span>
-</div>
+<div class="chips"><span class="chip">Hôm nay tới <b class="num">34°C</b>, mưa chiều tối</span><span class="chip">AQI sáng nay <b class="num">153</b></span><span class="chip">Brent <b class="num">114,88</b> USD</span><span class="chip">VN-Index <b class="num">1.755,61</b></span><span class="chip">Việc làm top: <b class="num">60</b>/100</span></div>
 </header>
 
-<section aria-label="Số nhanh"><div class="stats">
-<div class="stat s1"><span class="l">Hôm nay</span><span class="v">33°C</span><span class="d">Mưa chiều tới 40%</span></div>
-<div class="stat s2"><span class="l">Ngày mai</span><span class="v">33°C</span><span class="d">Mưa chiều tới 60%</span></div>
-<div class="stat s3"><span class="l">GDP 9 tháng</span><span class="v">+9,01%</span><span class="d">CPI +4,52%</span></div>
-<div class="stat s4"><span class="l">Dầu Brent</span><span class="v">~114</span><span class="d">USD/thùng, WTI ~99,9</span></div>
-</div></section>
+<section aria-label="Số nhanh"><div class="stats"><div class="stat s1"><span class="l">Hôm nay</span><span class="v">24–34°C</span><span class="d">Mưa dông chiều tối, có nơi to</span></div><div class="stat s2"><span class="l">Ngày mai</span><span class="v">25–33°C</span><span class="d">Mưa sáng, chiều; chiều tối có dông</span></div><div class="stat s3"><span class="l">VN-Index 29/10</span><span class="v">1.755,61</span><span class="d">−0,62%, ngoại bán ròng ~459 tỷ</span></div><div class="stat s4"><span class="l">Dầu Brent</span><span class="v">114,88</span><span class="d">USD/thùng, WTI ~102</span></div></div></section>
 
 <section aria-label="Thời tiết">
 <h2>Thời tiết và không khí</h2>
-<div class="cards">
-<div class="card">
-<div class="top"><div><span class="lbl">Hôm nay 28/10</span><div class="big">24 – 33°C</div></div>
-<svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><circle cx="19" cy="19" r="8" fill="#C6613F"/><g stroke="#C6613F" stroke-width="2.5" stroke-linecap="round"><path d="M19 5v4M19 29v4M5 19h4M29 19h4M9 9l3 3M29 9l-3 3M9 29l3-3"/></g><path d="M18 40a8 8 0 0 1 1-16 10 10 0 0 1 19 3 6.5 6.5 0 0 1-1 13z" fill="var(--grey)"/></svg></div>
-<div class="row"><span>AQI <b class="num">55 – 89</b></span><span class="badge">Trung bình</span></div>
-<div class="aqi"><i style="left:27.5%;width:17%"></i></div>
-<div class="scale"><span style="left:0">0</span><span style="left:25%">50</span><span style="left:50%">100</span><span style="left:75%">150</span><span style="left:100%">200+</span></div>
-<p class="fine">PM2.5 hiện tại <span class="num">19,8 µg/m³</span> · mưa nhẹ chiều, cao nhất khoảng 16:00</p>
-</div>
-<div class="card">
-<div class="top"><div><span class="lbl">Ngày mai 29/10</span><div class="big">24 – 33°C</div></div>
-<svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M14 31a8 8 0 0 1 1-16 10 10 0 0 1 19 3 6.5 6.5 0 0 1-1 13z" fill="var(--grey)"/><g stroke="#C6613F" stroke-width="2.5" stroke-linecap="round"><path d="M16 37l-2 5M25 37l-2 5M34 37l-2 5"/></g></svg></div>
-<div class="row"><span>AQI <b class="num">75 – 138</b></span><span class="badge">Xấu với nhóm nhạy cảm</span></div>
-<div class="aqi"><i style="left:37.5%;width:31.5%"></i></div>
-<div class="scale"><span style="left:0">0</span><span style="left:25%">50</span><span style="left:50%">100</span><span style="left:75%">150</span><span style="left:100%">200+</span></div>
-<p class="fine">Nhiều mây, mưa chiều tới 60% (cao nhất khoảng 16:00)</p>
-</div>
-</div>
-<div class="callout"><b>Ngày mai:</b> mang áo mưa, và khẩu trang lọc bụi nếu ra ngoài lâu. Nguồn: Tomorrow.io, 28/10.</div>
+<div class="cards"><div class="card"><div class="top"><div><span class="lbl">Hôm nay 30/10</span><div class="big">24 – 34°C</div></div><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M14 31a8 8 0 0 1 1-16 10 10 0 0 1 19 3 6.5 6.5 0 0 1-1 13z" fill="var(--grey)"/><g stroke="#C6613F" stroke-width="2.5" stroke-linecap="round"><path d="M16 37l-2 5M25 37l-2 5M34 37l-2 5"/></g></svg></div><div class="row"><span>AQI <b class="num">153</b></span><span class="badge">Không tốt</span></div><div class="aqi"><i style="left:75.5%;width:2.0%"></i></div><div class="scale"><span style="left:0">0</span><span style="left:25%">50</span><span style="left:50%">100</span><span style="left:75%">150</span><span style="left:100%">200+</span></div><p class="fine">AQI 153 lúc 08:21 (IQAir/AirVisual). Mưa rào, dông chiều tối, cục bộ mưa to. Nhiệt độ là số của Nam Bộ.</p></div><div class="card"><div class="top"><div><span class="lbl">Ngày mai 31/10</span><div class="big">25 – 33°C</div></div><svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M14 31a8 8 0 0 1 1-16 10 10 0 0 1 19 3 6.5 6.5 0 0 1-1 13z" fill="var(--grey)"/><g stroke="#C6613F" stroke-width="2.5" stroke-linecap="round"><path d="M16 37l-2 5M25 37l-2 5M34 37l-2 5"/></g></svg></div><div class="row"><span>AQI <b class="num">chưa kiểm chứng</b></span><span class="badge">Chưa có số</span></div><p class="fine">Nhiều mây, có lúc mưa sáng và chiều; chiều tối đến đêm mưa rào, dông rải rác, có nơi mưa to.</p></div></div>
+<div class="callout"><b>Lưu ý chung:</b> cả hai ngày đều có dông chiều tối. AQI ngày mai chưa tìm được nguồn có ngày giờ. Nguồn: HTV 29/10, Việt Nam Mới 30/10 06:00, Techz 30/10 08:21.</div>
 </section>
 
 <section aria-label="Tin tức">
 <h2>Tin lớn trong ngày</h2>
-<div class="cols">
-<div class="col"><span class="colhead">Tài chính</span>
-<article class="nc"><span class="tag tf">Chứng khoán</span><h4>Đi ngang, thanh khoản yếu</h4><p>Vùng 1.750 – 1.780 điểm; các CTCK khuyên thận trọng, tránh mua đuổi.</p><p class="src"><a href="https://vov.vn/thi-truong/nhan-dinh-chung-khoan-2810-thi-truong-tiep-tuc-phan-hoa-tranh-mua-duoi-post1344733.vov" target="_blank" rel="noopener">VOV</a> · <span class="num">28/10 06:15</span></p></article>
-<article class="nc"><span class="tag tf">Lãi suất</span><h4>Tiền gửi giảm lãi</h4><p>Nhiều ngân hàng giảm 0,5 – 0,9 điểm từ kỳ hạn 6 tháng. Cao nhất VPBank 6,9%.</p><p class="src"><a href="https://thoibaotaichinhvietnam.vn/top-ngan-hang-tra-lai-suat-tiet-kiem-cao-nhat-thang-10-2026-205659.html" target="_blank" rel="noopener">Thời báo Tài chính VN</a> · <span class="num">20/10</span></p></article>
-</div>
-<div class="col"><span class="colhead">Kinh tế</span>
-<article class="nc"><span class="tag te">Fed</span><h4>Công bố rạng sáng 29/10</h4><p>Thị trường định giá ~91% giữ nguyên ở 3,75 – 4,00%; ~73% tăng vào tháng 12.</p><p class="src"><a href="https://www.raisin.com/en-us/news/pre-fomc-preview-positioning-cash-october-2026/" target="_blank" rel="noopener">Raisin</a> · <span class="num">tháng 10</span></p></article>
-<article class="nc"><span class="tag te">Dầu</span><h4>Giảm vì hy vọng hòa đàm</h4><p>27/10: Brent ~113,9, WTI ~99,9 USD, lần đầu dưới 100 từ 23/10.</p><p class="src"><a href="https://tribune.com.pk/story/2637265/brent-down-18-as-iran-talks-advance" target="_blank" rel="noopener">Reuters qua Express Tribune</a> · <span class="num">28/10</span></p></article>
-<article class="nc"><span class="tag te">Việt Nam</span><h4>9 tháng tăng trưởng mạnh</h4><p>GDP +9,01%, CPI +4,52%, xuất nhập khẩu 888 tỷ USD (+30,4%).</p><p class="src"><a href="https://baoquocte.vn/kinh-te-viet-nam-tang-truong-9-01-trong-9-thang-nam-2026-451377.html" target="_blank" rel="noopener">Báo Quốc tế</a> · <span class="num">03/10</span></p></article>
-</div>
-<div class="col"><span class="colhead">Chính trị và chiến sự</span>
-<article class="nc"><span class="tag tp">Trung Đông</span><h4>Saudi – Iran nói chuyện tiếp</h4><p>Sau họp 26/10 ở Tehran, bốn bên thống nhất đối thoại tiếp. Rủi ro còn: Houthi, Hormuz.</p><p class="src"><a href="https://www.iranintl.com/en/202610260367" target="_blank" rel="noopener">Iran International</a> · <span class="num">26/10</span></p></article>
-<article class="nc"><span class="tag tp">Ukraine</span><h4>Giằng co ngoài tiền tuyến</h4><p>Ukraine tiến chậm ở Oleksandrivka, Nga tiến ở Novopavlivka.</p><p class="src"><a href="https://www.kyivpost.com/post/88262" target="_blank" rel="noopener">Kyiv Post (ISW)</a> · <span class="num">26/10</span></p></article>
-</div>
-</div>
+<div class="cols"><div class="col"><span class="colhead">Tài chính</span><article class="nc"><span class="tag tf">Chứng khoán</span><h4>VN-Index giảm 11 điểm</h4><p>Đóng cửa 29/10 ở 1.755,61 (−0,62%). Thanh khoản HOSE hơn 14.000 tỷ; khối ngoại bán ròng ~459 tỷ, phiên thứ 5 liên tiếp.</p><p class="src"><a href="https://voh.com.vn/kinh-te/bat-song-thi-truong-3010-vn-index-giam-ve-175561-diem-dau-brent-vuot-114-usdthung-676609.html" target="_blank" rel="noopener">VOH</a> · <span class="num">30/10</span></p></article><article class="nc"><span class="tag tf">Kỹ thuật</span><h4>Nến giảm, dưới SMA 50</h4><p>Mẫu Bearish Engulfing, chỉ số nằm dưới đường SMA 50 ngày; đáy trong phiên sát 1.750.</p><p class="src"><a href="https://vietstock.vn/2026/10/vietstock-daily-30102026-ap-luc-gia-tang-1636-1508627.htm" target="_blank" rel="noopener">Vietstock</a> · <span class="num">29/10 18:17</span></p></article></div><div class="col"><span class="colhead">Kinh tế</span><article class="nc"><span class="tag te">Fed</span><h4>Giữ lãi suất 3,75–4,00%</h4><p>Quyết định ngày 28/10. Số phiếu thuận/chống chưa kiểm chứng.</p><p class="src"><a href="https://fedratecalc.com/fomc-meeting-schedule/october-2026/" target="_blank" rel="noopener">FedRateCalc</a> · <span class="num">28/10</span></p></article><article class="nc"><span class="tag te">Dầu</span><h4>Brent 114,88, hơi hạ nhiệt</h4><p>WTI ~102 USD. Kỳ vọng đàm phán Mỹ – Iran kéo giá xuống, rủi ro Trung Đông vẫn còn.</p><p class="src"><a href="https://voh.com.vn/kinh-te/bat-song-thi-truong-3010-vn-index-giam-ve-175561-diem-dau-brent-vuot-114-usdthung-676609.html" target="_blank" rel="noopener">VOH</a> · <span class="num">30/10</span></p></article><article class="nc"><span class="tag te">Xăng</span><h4>Xăng trong nước tăng giá</h4><p>Từ 15:00 29/10: E10 RON95-III 25.734 đ/lít, diesel 0.05S 30.246 đ/lít.</p><p class="src"><a href="https://voh.com.vn/kinh-te/bat-song-thi-truong-3010-vn-index-giam-ve-175561-diem-dau-brent-vuot-114-usdthung-676609.html" target="_blank" rel="noopener">VOH</a> · <span class="num">30/10</span></p></article></div><div class="col"><span class="colhead">Chính trị và chiến sự</span><article class="nc"><span class="tag tp">Mỹ – Iran</span><h4>Kỳ vọng đàm phán, giá dầu hạ</h4><p>Chưa tìm được bài riêng ngày 29–30/10 về nội dung đàm phán; chỉ có ghi nhận từ bản tin thị trường.</p><p class="src"><a href="https://voh.com.vn/kinh-te/bat-song-thi-truong-3010-vn-index-giam-ve-175561-diem-dau-brent-vuot-114-usdthung-676609.html" target="_blank" rel="noopener">VOH</a> · <span class="num">30/10</span></p></article><article class="nc"><span class="tag tp">Ukraine</span><h4>Hơn 150 đụng độ mỗi ngày</h4><p>Nga dồn lực về Pokrovsk (43 đợt tấn công), cố tiến tới Kupiansk. Bài ghi 24/10, chưa kiểm chứng năm.</p><p class="src"><a href="https://plo.vn/chien-su-nga-ukraine-25-10-ac-liet-voi-hon-150-cuoc-giao-tranh-o-tien-tuyen-nga-co-dong-thai-moi-o-kharkiv-post816578.html" target="_blank" rel="noopener">PLO</a> · <span class="num">24/10</span></p></article></div></div>
 </section>
 
 <section aria-label="Việc làm">
 <h2>Việc làm IT tài chính / SRE, top 5</h2>
-<p class="fine">Điểm /100: hình thức làm việc (30), tài chính (25), học mới (25), cân bằng 50/50 (20). Từ 75 là cao. Chấm theo tiêu đề và đoạn trích, chưa đọc mô tả đầy đủ; hình thức làm việc chưa rõ tính 20; lương không nêu.</p>
+<p class="fine">Điểm /100: hình thức làm việc (30), tài chính (25), học mới (25), cân bằng 50/50 (20). Từ 75 là cao. Chấm theo tiêu đề và đoạn trích thư LinkedIn 28–29/10, chưa đọc mô tả đầy đủ; hình thức làm việc chưa rõ tính 20; lương không nêu. Lần này không có vị trí nào đạt 75.</p>
 <div class="jobs">
-<article class="job hi"><div class="ring" style="--p:86"><span>86</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4446040417/" target="_blank" rel="noopener">Senior Technical Engineer (SRE, Ops, AI)</a></h4><div class="co">HSC · Chứng khoán · Cao</div><p>Chứng khoán + SRE/AI, đúng hướng 50/50.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:100%"></u></i><em class="num">25</em></div><div class="bar"><span>Học mới</span><i><u style="width:88%"></u></i><em class="num">22</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:95%"></u></i><em class="num">19</em></div></div></div></article>
-<article class="job"><div class="ring" style="--p:60"><span>60</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4482914311/" target="_blank" rel="noopener">Senior Platform / DevOps Engineer</a></h4><div class="co">GreenNode · Trung bình</div><p>Học K8s, cloud nhiều; không nêu tài chính.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:20%"></u></i><em class="num">5</em></div><div class="bar"><span>Học mới</span><i><u style="width:100%"></u></i><em class="num">25</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
-<article class="job"><div class="ring" style="--p:60"><span>60</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4482945342/" target="_blank" rel="noopener">Application Production Support Engineer, Banking</a></h4><div class="co">Innotech Vietnam · Trung bình</div><p>Sát nghề cũ, ít thứ mới để học.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:88%"></u></i><em class="num">22</em></div><div class="bar"><span>Học mới</span><i><u style="width:32%"></u></i><em class="num">8</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
-<article class="job"><div class="ring" style="--p:59"><span>59</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4483532250/" target="_blank" rel="noopener">Senior Site Reliability Engineer</a></h4><div class="co">SmartDev · Trung bình</div><p>SRE thuần; không nêu tài chính.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:20%"></u></i><em class="num">5</em></div><div class="bar"><span>Học mới</span><i><u style="width:96%"></u></i><em class="num">24</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
-<article class="job"><div class="ring" style="--p:59"><span>59</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4482918134/" target="_blank" rel="noopener">Senior MLOps Engineer (AI/ML, AWS)</a></h4><div class="co">FPT Software Innovation · Trung bình</div><p>Vận hành hệ thống AI; không nêu tài chính.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:20%"></u></i><em class="num">5</em></div><div class="bar"><span>Học mới</span><i><u style="width:96%"></u></i><em class="num">24</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
+<article class="job"><div class="ring" style="--p:60"><span>60</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4440034540/" target="_blank" rel="noopener">Senior DevOps Engineer</a></h4><div class="co">Motorola Solutions · Trung bình</div><p>Học DevOps tốt; không nêu tài chính, hình thức làm việc.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:20%"></u></i><em class="num">5</em></div><div class="bar"><span>Học mới</span><i><u style="width:100%"></u></i><em class="num">25</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
+<article class="job"><div class="ring" style="--p:60"><span>60</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4484417303/" target="_blank" rel="noopener">VN | CW | Senior DevOps Engineer</a></h4><div class="co">CBTW APAC · Trung bình</div><p>DevOps thuần; không nêu tài chính.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:20%"></u></i><em class="num">5</em></div><div class="bar"><span>Học mới</span><i><u style="width:100%"></u></i><em class="num">25</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
+<article class="job"><div class="ring" style="--p:59"><span>59</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4484915427/" target="_blank" rel="noopener">Middle/Senior MLOps Engineer</a></h4><div class="co">FPT Software · Trung bình</div><p>Vận hành hệ thống AI; không nêu tài chính.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:20%"></u></i><em class="num">5</em></div><div class="bar"><span>Học mới</span><i><u style="width:96%"></u></i><em class="num">24</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
+<article class="job"><div class="ring" style="--p:59"><span>59</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4447889433/" target="_blank" rel="noopener">Site Reliability Senior Staff</a></h4><div class="co">Synopsys · Trung bình</div><p>SRE hạ tầng EDA; không nêu tài chính.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:20%"></u></i><em class="num">5</em></div><div class="bar"><span>Học mới</span><i><u style="width:96%"></u></i><em class="num">24</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
+<article class="job"><div class="ring" style="--p:59"><span>59</span></div><div class="jb"><h4><a href="https://www.linkedin.com/jobs/view/4483655009/" target="_blank" rel="noopener">Lead Site Reliability Engineer, Zalo</a></h4><div class="co">Zalo · Trung bình</div><p>SRE quy mô lớn; cấp Lead, chưa rõ có quản lý người.</p><div class="bars"><div class="bar"><span>Làm việc</span><i><u style="width:67%"></u></i><em class="num">20</em></div><div class="bar"><span>Tài chính</span><i><u style="width:20%"></u></i><em class="num">5</em></div><div class="bar"><span>Học mới</span><i><u style="width:96%"></u></i><em class="num">24</em></div><div class="bar"><span>Cân bằng</span><i><u style="width:50%"></u></i><em class="num">10</em></div></div></div></article>
 </div>
 </section>
 
 <section aria-label="Cần theo dõi">
 <h2>Cần theo dõi</h2>
-<div class="todo">
-<div>Fed công bố rạng sáng 29/10.</div>
-<div>AQI ngày mai có lúc tới 138.</div>
-<div>Mưa chiều khoảng 16:00, cả hôm nay và ngày mai.</div>
-<div>Vòng đối thoại Saudi – Iran tiếp theo và giá dầu.</div>
-</div>
+<div class="todo"><div>Phiên 30/10: hỗ trợ ~1.750, kháng cự 1.765–1.780 (dự báo 1.740–1.770, theo Kafi qua VOH).</div><div>Mưa dông chiều tối, cả hôm nay và ngày mai.</div><div>AQI hôm nay 153; ngày mai chưa kiểm chứng.</div><div>Đàm phán Mỹ – Iran và giá dầu quanh 114 USD.</div></div>
 </section>
 
 <footer>
-<p><b>Nguồn:</b> Tomorrow.io · Raisin · VOV · Express Tribune · Iran International · Kyiv Post · Báo Quốc tế · Thời báo Tài chính VN · LinkedIn Job Alerts (26 – 27/10).</p>
-<p>Tin chứng khoán, dầu và Ukraine đọc lần cuối sáng 28/10, trang nguồn không mở lại được lúc dựng bản này. Bản tin mang tính tham khảo, không phải khuyến nghị đầu tư.</p>
+<p><b>Nguồn:</b> VOH · Vietstock · HTV · Việt Nam Mới · Techz · FedRateCalc · PLO · LinkedIn Job Alerts (28–29/10).</p>
+<p>Chưa kiểm chứng: AQI ngày mai, số phiếu Fed, nhiệt độ riêng TP.HCM (nguồn nêu số chung Nam Bộ), năm của bài Ukraine. Bản tin mang tính tham khảo, không phải khuyến nghị đầu tư.</p>
 </footer>
 </div>
 </body>
